@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <div class="controls">
+        <h2>Controls</h2>
+        <button onclick="resetGame()">🔄</button>
+        <button onclick="openHelp()">?</button>
+    </div>
+    <div class="game-container">
+        <div class="memory-board" id="memoryBoard"></div>
+    </div>
+
+    <!-- Help Popup -->
+    <div id="helpPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeHelp()">&times;</span>
+            <h2 class="popup-title">How to Play</h2>
+            <p>
+                The objective of the game is to find matching pairs of cards.
+                <ul>
+                    <li>Click on a card to flip it and reveal the symbol.</li>
+                    <li>Flip two cards at a time.</li>
+                    <li>If the cards match, they will stay flipped.</li>
+                    <li>If they do not match, they will flip back over.</li>
+                    <li>Continue flipping cards until all pairs are matched!</li>
+                </ul>
+            </p>
+            <p>Good luck and enjoy the game!</p>
+        </div>
+    </div>
+
+    <div id="gameEndedMessage"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
