@@ -94,12 +94,18 @@ function resetGame() {
 }
 
 /* Help Popup Functions */
-function openHelp() {
-    document.getElementById("helpPopup").style.display = "flex";
+function openPopup(id) {
+    document.getElementById(id).style.display = "flex";
 }
 
-function closeHelp() {
-    document.getElementById("helpPopup").style.display = "none";
+function closePopup(id) {
+    document.getElementById(id).style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", setupBoard);
+
+window.onload = () => {
+    const emoji = ['❤️', '☕️', '🍕', '🍎', '🍌', '🍗', '🥗'].sort(() => 0.4 - Math.random())[0];
+    console.log(emoji);
+    document.getElementById("bwm").innerHTML = `Built with ${emoji} by <a href='https://techpals.eu?src=mem-game'>TechPals</a>`;
+};
