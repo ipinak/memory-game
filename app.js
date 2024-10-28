@@ -23,6 +23,7 @@ function setupBoard() {
         card.addEventListener("click", flipCard);
         memoryBoard.appendChild(card);
     });
+    removeEndMessage();
 }
 
 function flipCard() {
@@ -106,6 +107,7 @@ document.addEventListener("DOMContentLoaded", setupBoard);
 
 window.onload = () => {
     const emoji = ['❤️', '☕️', '🍕', '🍎', '🍌', '🍗', '🥗'].sort(() => 0.4 - Math.random())[0];
-    console.log(emoji);
-    document.getElementById("bwm").innerHTML = `Built with ${emoji} by <a href='https://techpals.eu?src=mem-game'>TechPals</a>`;
+    const msg = `Built with ${emoji} by <a href='https://techpals.eu?src=mem-game'>TechPals</a>`;
+    console.log(msg);
+    document.getElementById("bwm").innerHTML = msg;
 };
