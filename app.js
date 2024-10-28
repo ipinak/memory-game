@@ -1,4 +1,6 @@
-const cardsArray = ["🍎", "🍌", "🍒", "🍇", "🍎", "🍌", "🍒", "🍇", "🍍", "🥭", "🍍", "🥭", "🍑", "🍉", "🍑", "🍉"];
+const uniqueEmojis = ['🍎', '🍌', '🍉', '🍇', '🍓', '🍒', '🍍', '🥭', '🍑', '🥝', '🍋', '🍐', '🥑', '🍔', '🍕', '🍟', '🌭', '🍿'];
+const cardsArray = [...uniqueEmojis, ...uniqueEmojis];
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -14,7 +16,7 @@ function setupBoard() {
     memoryBoard.innerHTML = '';
     matches = 0;
     shuffleCards(cardsArray);
-    
+
     cardsArray.forEach(symbol => {
         const card = document.createElement("div");
         card.classList.add("card");
