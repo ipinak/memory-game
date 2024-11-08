@@ -185,3 +185,45 @@ h1 {
 #bwm {
     padding: 10px;
 }
+
+@keyframes bounceAnimation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#gameEndedMessage {
+    animation: bounceAnimation 0.7s ease-out;
+}
+
+/* ---- Heartbeat copyright ---- */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.copyright {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px; /* Adjust as needed */
+}
+
+.heart {
+  color: red;
+  animation: heartbeat 1s infinite;
+  display: inline-block;
+  margin: 0 5px;
+}
+
