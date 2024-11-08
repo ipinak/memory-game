@@ -113,8 +113,11 @@ h1 {
 }
 
 .game-ended {
-    background-color: #4CAF50;
+    background-color: #fff;
     padding: 10px;
+    position: absolute;
+    top: 360px;
+    border-radius: 25px;
 }
 
 .close {
@@ -154,6 +157,10 @@ h1 {
     .popup-content p {
         font-size: 0.9em;
     }
+
+    .game-ended {
+      top: 275px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -179,6 +186,10 @@ h1 {
 
     .popup-content p {
         font-size: 0.85em;
+    }
+
+    .game-ended {
+      top: 256px;
     }
 }
 
