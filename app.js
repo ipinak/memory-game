@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", setupBoard);
 
 window.onload = () => {
     const emoji = ['❤️', '☕️', '🍕', '🍎', '🍌', '🍗', '🥗'].sort(() => 0.4 - Math.random())[0];
-    const msg = `Built with <span class="heart">${emoji}</span> by <a href='https://techpals.eu?src=mem-game'>TechPals</a>`;
+    const msg = `Built with <span class="heart">${emoji}</span> by <a class="techpals-link" href='https://techpals.eu?src=mem-game'>TechPals</a>`;
     console.log(msg);
     document.getElementById("bwm").innerHTML = msg;
 };
